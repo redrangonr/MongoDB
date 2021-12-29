@@ -25,8 +25,12 @@ public class User {
     @Max(1)
     private Integer status;
 
-    public User() {
 
+    public User(String userId, String notiMsg, Date receiverTime, Integer status) {
+        this.userId = userId;
+        this.notiMsg = notiMsg;
+        this.receiverTime = receiverTime;
+        this.status = status;
     }
 
     public User(String userId, String notiMsg, Date receiverTime, Date changeTime, Integer status) {
