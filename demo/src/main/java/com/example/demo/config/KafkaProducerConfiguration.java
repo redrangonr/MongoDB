@@ -16,7 +16,7 @@ import java.util.Properties;
 public class KafkaProducerConfiguration {
 
     @Bean
-    public ProducerFactory<String, User> producerFactory() {
+    public ProducerFactory<String, Object> producerFactory() {
         Properties props = new Properties();
         props.put("bootstrap.servers", "10.0.223.140:9092");
         props.put("acks", "all");
@@ -33,7 +33,7 @@ public class KafkaProducerConfiguration {
     }
 
     @Bean
-    public KafkaTemplate<String, User> kafkaTemplate() {
+    public KafkaTemplate<String, Object> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
     }
 }

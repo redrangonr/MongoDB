@@ -16,7 +16,7 @@ import java.util.Optional;
 @Service
 public class UserService {
     @Autowired
-    private KafkaTemplate<String,User> kafkaTemplate;
+    private KafkaTemplate<String,Object> kafkaTemplate;
     @Autowired
     private UseRepository useRepository;
     private static final String TOPIC = "tpc-notification-dev";
